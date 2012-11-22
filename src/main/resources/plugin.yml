@@ -1,0 +1,8 @@
+name: YawTest
+version: 0.1
+main: com.araeosia.yawtest.YawTest
+commands:
+  yaw:
+    description: Change your yaw!
+    permission: yawtest.test
+    usage: Type /<command> [Yaw] to change your yaw.
