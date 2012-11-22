@@ -16,7 +16,7 @@ public class YawTest extends JavaPlugin implements Listener, CommandExecutor{
 	public void onEnable(){
 		log = getServer().getLogger();
 		log.info("Enabling!");
-		getCommand("kit").setExecutor(this);
+		getCommand("yaw").setExecutor(this);
 	}
 	@Override
 	public void onDisable(){
@@ -31,6 +31,7 @@ public class YawTest extends JavaPlugin implements Listener, CommandExecutor{
 					int yaw = Integer.parseInt(args[0]);
 					Location newLoc = p.getLocation();
 					newLoc.setYaw(yaw);
+					p.sendMessage(newLoc.toString());
 					p.teleport(newLoc);
 					return true;
 				}
